@@ -1,14 +1,15 @@
 
-p {}
+p {
+}
 
 h1{
-    outline-style: solid;
+    /* outline-style: solid;
     outline-color: black;
     outline-width: 2px;
-    outline-offset: 2px;    
+    outline-offset: 2px;     */
 
     border-style: solid;
-    border-width: 7px;
+    border-width: 8px;
     border-color: dodgerblue;
     
     text-align: center;
@@ -18,7 +19,7 @@ h1{
 }
 
 body {
-    background-color: lightgrey;
+    background-color: whitesmoke;
 }
 
 li{
@@ -48,7 +49,43 @@ button{
     transition-duration: 0.3s;
 }
 
-button:hover{
-  background-color: rgb(241, 121, 121);  color:white;
-    
-}
+button:hover{background-color: rgb(241, 121, 121);  color:white;}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: red;
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+  
+  .menulink {float: left;}
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover { background-color:  rgb(241, 121, 121);}
+
+
+
+  .top {grid-area: top;}
+  .midte {grid-area: midte;}
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'top top'
+      'midte midte';
+    grid-gap: 10px;
+    padding: px;
+  }
+
+  
