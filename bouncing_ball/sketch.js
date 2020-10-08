@@ -9,6 +9,8 @@ function setup() {
 function draw() {
   background(220);
 
+//__________________________________________________
+
 // op og ned:
 // fill(150,100,400)  
 // circle(200,CX,radius)
@@ -28,7 +30,6 @@ function draw() {
 // if (CX < 0 + radius/2) {hastighed = 3}
 
 // CX = CX + hastighed
-
 
 //_________________________________________________
 
