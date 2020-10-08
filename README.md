@@ -2,6 +2,6 @@
 
 - [Min opskriftside](opskrift.html)
 - [Tændstiksmand](stickman)
-- [Tændstiksmand2](stickman2)
+- [Bounce Test](sbouncing_ball_test)
 - [Bouncing ball](bouncing_ball)
 

@@ -9,35 +9,35 @@ function setup() {
 function draw() {
   background(220);
 
-//__________________________________________________
-
-// op og ned:
-// fill(150,100,400)  
-// circle(200,CX,radius)
-
-// if (CX < length + radius/2) {hastighed = 5}
-// if (CX > 400 - radius/2) {hastighed = -5}
-
-// CX = CX + hastighed
-
-//__________________________________________________
-
-// frem og tilbage:
-// fill(0)  
-// circle(CX,200,radius)
-
-// if (CX > width - radius/2) {hastighed = -3}
-// if (CX < 0 + radius/2) {hastighed = 3}
-
-// CX = CX + hastighed
-
-//_________________________________________________
-
+  
+  //__________________________________________________
+  
+  // op og ned:
+  // fill(150,100,400)  
+  // circle(200,CX,radius)
+  
+  // if (CX < length + radius/2) {hastighed = 5}
+  // if (CX > 400 - radius/2) {hastighed = -5}
+  
+  // CX = CX + hastighed
+  
+  //__________________________________________________
+  
+  // frem og tilbage:
+  // fill(0)  
+  // circle(CX,200,radius)
+  
+  // if (CX > width - radius/2) {hastighed = -3}
+  // if (CX < 0 + radius/2) {hastighed = 3}
+  
+  // CX = CX + hastighed
+  
+  //_________________________________________________
 
 fill(150,100,400)  
 circle(200,CX,radius)
 
-if (CX < length + radius/2) {hastighed = 5}
+if (CX < 0 + radius/2) {hastighed = 5}
 if (CX > mouseY - radius/2) {hastighed = -5}
 
 CX = CX + hastighed
