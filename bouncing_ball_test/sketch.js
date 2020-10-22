@@ -1,7 +1,7 @@
 let CX = 100;
 let radius = 50;
-let hastighed = 5;
-//let hastighed_ændring = 3;
+let hastighed = 3;
+let hastighed_ændring = 2;
 
 function setup() {
   createCanvas(400, 400);
@@ -28,6 +28,7 @@ function draw() {
   //print(position)
 
   //  || betyder eller && betyder og 
+  
   if (CX < radius/2 || CX > width - radius/2) {hastighed=-hastighed};
  
   CX = CX + hastighed; //position
