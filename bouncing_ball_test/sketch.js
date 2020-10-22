@@ -18,7 +18,8 @@ function draw() {
   if (CX < 0 + radius/2) {position = hastighed};
   
   if (position >= 0) {if (mouseIsPressed) {position = hastighed + hastighed_ændring} };
-  if (position <= 0) {if (mouseIsPressed) {position = hastighed - hastighed_ændring} };
+ // if (position <= 0) 
+ else {if (mouseIsPressed) {position = hastighed - hastighed_ændring} };
 
   print(position)
 
