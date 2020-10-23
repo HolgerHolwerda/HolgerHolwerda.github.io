@@ -32,16 +32,11 @@ let x = 2
 let y = 1
 let z = 0
 
-do {console.log(z)
-
+do { 
   z = x*y
   y++
+  console.log(z)
 
+}while (y<=10)
 
-}while (y<10)
-
-do {console.log(z)
-
-
-} while (x<=10)
-//}
+}
