@@ -3,7 +3,8 @@
 function setup() {
   createCanvas(400, 400);
 
-//opgave 1
+//opgave 1 ____________________________________________________
+
   // let x = 10
 
 // while (x > 0) {
@@ -12,7 +13,8 @@ function setup() {
 // }
 
 
-//opgave 2
+//opgave 2 __________________________________________________
+
 // let n = 20
 // let x = 1
 // let y = 1
@@ -25,7 +27,8 @@ function setup() {
 // }
 
 
-//opgave 3
+//opgave 3 ____________________________________________________
+
 // let x = 2
 // let y = 1
 // let z = 0
@@ -46,19 +49,33 @@ function setup() {
 // }while (x<=10)
 
 
-//opgave 4
+//opgave 4 a __________________________________________________
 
-let x = 0
-let y = 0
+// let x = 0
+// let y = 0
 
-do {
+// do {
 
-  y = 3*x*x+6*x+9
-  console.log(y)
-  x++
+//   y = 3*x*x+6*x+9
+//   console.log(y)
+//   x++
 
-} while (x<=10)
+// } while (x<=100)
 
+
+//opgave 4 b _______________________________________________
+
+// let x = 0
+// let y = 0
+// let z = 10
+
+// do {
+
+//   y = 3*x*x+6*x+9
+//   console.log(y)
+//   x = x + z
+
+// } while (x<=100)
 
 }
 
