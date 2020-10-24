@@ -60,7 +60,7 @@ function setup() {
 //   console.log(y)
 //   x++
 
-// } while (x<=100)
+// } while (x<=10)
 
 
 //opgave 4 b _______________________________________________
