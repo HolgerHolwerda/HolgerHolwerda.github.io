@@ -5,6 +5,7 @@
 - [Bounce Test](bouncing_ball_test)
 - [Bouncing ball](bouncing_ball)
 
+Loopopgaver
 - [Loopopgave 1](loop_opgaver/loop_1)
 - [Loopopgave 2](loop_opgaver/loop_2)
 - [Loopopgave 3](loop_opgaver/loop_3)
