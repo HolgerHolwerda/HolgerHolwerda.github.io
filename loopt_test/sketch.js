@@ -48,6 +48,16 @@ function setup() {
 
 //opgave 4
 
+let x = 0
+let y = 0
+
+do {
+
+  y = 3*x*x+6*x+9
+  console.log(y)
+  x++
+
+} while (x<=10)
 
 
 }
