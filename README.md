@@ -4,6 +4,7 @@
 - [Tændstiksmand](stickman)
 - [Bounce Test](bouncing_ball_test)
 - [Bouncing ball](bouncing_ball)
+- [Logiske operatorer](logiske_operatorer)
 
 Loopopgaver:
 
