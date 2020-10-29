@@ -5,23 +5,33 @@ function setup() {
 
 // udskriver 2-10 tabellerne
 
-let x = 2
+let tabel = 2
 let y = 1
-let z = 0
+let produkt = 0
 
 do { 
 
   if (y<=10) {
-    z = x*y
+    produkt = tabel*y
     y++
-    console.log(z)
+    console.log(produkt)
   }
   
   else {
-    x++
+    tabel++
     y = 1
   }
 
-}while (x<=10)
+}while (tabel<=10)
 
 }
+
+// med en for løkke
+
+// for (let i = 2; i<=10; i++){
+//   console.log('tabel: ${i}')
+//   for (let j = 1; j<=10;j++){
+//     let produkt = i*j;
+//     console.log(produkt)
+//   }
+// }
