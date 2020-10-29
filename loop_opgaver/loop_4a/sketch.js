@@ -17,3 +17,10 @@ do {
 } while (x<=10)
 
 }
+
+// med for lykke
+
+// for(let x = 0; x<=10; x++) {
+//   let y = 3*x*x+6*x+9
+//   console.log(y)
+// }
