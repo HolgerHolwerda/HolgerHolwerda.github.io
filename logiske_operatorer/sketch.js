@@ -5,10 +5,6 @@ function setup() {
 function draw() {
   background(220);
 
-// if(mouseX > width/2 && mouseY > height/2) {fill ('white')}
-//   else if (mouseX < width/2 && mouseY < height/2) {fill('white')}
-//   else {fill('red')}
-
 if(mouseX > width/2 && mouseY > height/2 || mouseX < width/2 && mouseY < height/2) {
   fill ('white');
 }
