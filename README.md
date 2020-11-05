@@ -2,9 +2,10 @@
 
 - [Min opskriftside](hjemmeside/opskrift.html)
 - [Tændstiksmand](stickman)
-- [Bounce Test](bouncing_ball_test)
+- [Bounce](bouncing_ball_test)
 - [Bouncing ball](bouncing_ball)
 - [Logiske operatorer](logiske_operatorer)
+- [Parabel](parabelopgave)
 
 Loopopgaver:
 
