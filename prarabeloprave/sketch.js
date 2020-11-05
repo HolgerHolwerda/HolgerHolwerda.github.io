@@ -13,22 +13,25 @@ function draw() {
   let y2 = 60
   let y3 = mouseY
 
-  let n = mouseX
+  
+  
+  point(x1,y1);
+  point(x2,y2);
+  point(x3,y3);
+  
+  line(x1,y1,x3,y3);
+  line(x2,y2,x3,y3);
+  
+  let n = map(mouseX,0,width,2,10,true)
+  n = round(n)
+  
 
-
-point(x1,y1);
-point(x2,y2);
-point(x3,y3);
-
-
-line(x1,y1,x3,y3);
-line(x2,y2,x3,y3);
-
-let a = 1
-let b = 1
-let x = 1
-let y = a*x+b
-
-map(y,10,300,10,300,true)
+for(let i = 0; i <= n; i++ ){
+  const x = map(i,0,n,x1,x3,true)
+  const y = map(i,0,n,y1,y3,true)
+  
+  circle(x,y,10)
+  
+}
 
 }
