@@ -6,31 +6,35 @@ function setup() {
 function draw() {
   background(220);
 
-  let x1 = width/2-150
-  let x2 = width/2+150
-  let x3 = width/2
-  let y1 = 60
-  let y2 = 60
-  let y3 = mouseY
+  let px1 = width/2-150
+  let px2 = width/2+150
+  let px3 = width/2
+  let py1 = 60
+  let py2 = 60
+  let py3 = mouseY
 
   
   
-  point(x1,y1);
-  point(x2,y2);
-  point(x3,y3);
+  point(px1,py1);
+  point(px2,py2);
+  point(px3,py3);
   
-  line(x1,y1,x3,y3);
-  line(x2,y2,x3,y3);
+  line(px1,py1,px3,py3);
+  line(px2,py2,px3,py3);
   
   let n = map(mouseX,0,width,2,10,true)
   n = round(n)
   
 
 for(let i = 0; i <= n; i++ ){
-  const x = map(i,0,n,x1,x3,true)
-  const y = map(i,0,n,y1,y3,true)
-  
-  circle(x,y,10)
+  const x1 = map(i,0,n,px1,px3,true)
+  const y1 = map(i,0,n,py1,py3,true)
+  const x2 = map(i,0,n,px2,px3,true)
+  const y2 = map(i,0,n,py2,py3,true)
+
+  circle(x1,y1,10)
+  circle (x2,y2,10)
+  line(x1,y1,x2,y2)
   
 }
 
