@@ -1,10 +1,10 @@
 function setup() {
-  createCanvas(500, 400);
+  createCanvas(600, 500);
 
 }
 
 function draw() {
-  background(220);
+  background(0);
 
   let px1 = width/2-150
   let px2 = width/2+150
@@ -12,17 +12,13 @@ function draw() {
   let py1 = 60
   let py2 = 60
   let py3 = mouseY
+  let radius = 5
 
-  
-  
-  point(px1,py1);
-  point(px2,py2);
-  point(px3,py3);
   
   line(px1,py1,px3,py3);
   line(px2,py2,px3,py3);
   
-  let n = map(mouseX,0,width,2,15,true)
+  let n = map(mouseX,0,width,2,20,true)
   n = round(n)
   
 
@@ -34,14 +30,12 @@ for(let i = 0; i <= n; i++ ){
   const y2 = map(i,0,n,py3,py2,true)
   
   
-  circle(x1,y1,10)
-  circle (x2,y2,10)
+  circle(x1,y1,radius)
+  circle (x2,y2,radius)
   
+  stroke(255)
   line(x1,y1,x2,y2)
-
-
   
 }
-
 
 }
