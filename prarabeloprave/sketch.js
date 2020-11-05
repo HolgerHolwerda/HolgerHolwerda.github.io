@@ -34,7 +34,10 @@ for(let i = 0; i <= n; i++ ){
 
   circle(x1,y1,10)
   circle (x2,y2,10)
- // line(y1,y2,x1,x2)
+
+  
+  //line(x1,y1,px2,py2)
+  //line(x2,y2,px1,py1)
   
 }
 
