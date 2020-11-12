@@ -13,7 +13,6 @@ function draw() {
   let py2 = 60
   let py3 = mouseY
   let radius = 5
-
   
   line(px1,py1,px3,py3);
   line(px2,py2,px3,py3);
