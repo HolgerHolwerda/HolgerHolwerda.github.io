@@ -6,6 +6,7 @@
 - [Bouncing ball](bouncing_ball)
 - [Logiske operatorer](logiske_operatorer)
 - [Parabel](parabelopgave)
+- [Multiple Bounceballs](bounce_all)
 
 Loopopgaver:
 
