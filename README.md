@@ -7,6 +7,7 @@
 - [Logiske operatorer](logiske_operatorer)
 - [Parabel](parabelopgave)
 - [Multiple Bounceballs](bounce_all)
+- [Random Bounceballs med classes](bounce_all_classes)
 
 Loopopgaver:
 

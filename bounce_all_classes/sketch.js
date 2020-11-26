@@ -45,6 +45,7 @@ class BouncingBall extends Ball {
     super.update()
     if (this.x + this.r > width || this.x - this.r < 0) {
       this.speedX = -this.speedX
+
     }
     if (this.y + this.r > height || this.y - this.r < 0) {
       this.speedY = -this.speedY
@@ -69,7 +70,7 @@ class RandomBouncingBall extends BouncingBall {
     stroke(this.sc)
     strokeWeight(this.sw)
     fill(this.color)
-    
+
     super.render()
   }
 }
