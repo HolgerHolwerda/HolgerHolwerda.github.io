@@ -1,4 +1,4 @@
-let number_of_balls = 10;
+let number_of_balls = 20;
 let balls = new Array(number_of_balls);
 
 function setup() {
@@ -22,9 +22,9 @@ class Ball {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.r = random(5, 50)
+    this.r = random(10, 50)
 
-    const speedMax = 15
+    const speedMax = 10
     this.speedX = random(-speedMax, speedMax)
     this.speedY = random(-speedMax, speedMax)
   }
@@ -55,14 +55,21 @@ class BouncingBall extends Ball {
 class RandomBouncingBall extends BouncingBall {
   constructor(x, y) {
     super(x, y)
-    this.sw = random(1,10)
-    this.sc = random(1, 200)
-    this.color = color(random(1, 200))
+    const red = random(0, 255)
+    const green = random(0, 255)
+    const blue = random(0, 255)
+
+    this.sc = color(blue, red, green)
+    this.sw = random(1, 10)
+    this.color = color(red, green, blue)
   }
+
+
   render() {
-    fill(this.color)
-    strokeWeight(this.sw)
     stroke(this.sc)
+    strokeWeight(this.sw)
+    fill(this.color)
+    
     super.render()
   }
 }
