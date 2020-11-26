@@ -1,4 +1,4 @@
-let number_of_balls = 20;
+let number_of_balls = 25;
 let balls = new Array(number_of_balls);
 
 function setup() {
@@ -22,9 +22,9 @@ class Ball {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.r = random(10, 50)
+    this.r = random(20, 60)
 
-    const speedMax = 10
+    const speedMax = 13
     this.speedX = random(-speedMax, speedMax)
     this.speedY = random(-speedMax, speedMax)
   }
