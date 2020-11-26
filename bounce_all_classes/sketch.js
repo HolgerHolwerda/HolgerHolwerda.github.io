@@ -36,6 +36,7 @@ class Ball {
 
   render() {
     circle(this.x, this.y, this.r * 2);
+   // rect(this.x,this.y,this.r*2,this.r*2)
   }
 }
 
