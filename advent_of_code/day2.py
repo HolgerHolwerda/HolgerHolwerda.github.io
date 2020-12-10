@@ -15,20 +15,29 @@ def load_data(fileName):
 
 def problemOne():
     global lines
-    print(lines)
+    # print(lines)
 
     ValidPassCounter = 0
 
+    # split linjerne i deres bestanddele
     for line in lines:
-        parts = line.split(": ")
-        p = parts[1]
+        parts1 = line.split(": ")
+        
+        password = parts1[1]
 
-        rules = parts[0]
-        l = rules.split("  ")
-        low = int(rules.split("-")[0])
+        rules = parts1[0] 
+        parts2 = rules.split(" ")
+  
+        letter = parts2[1]
+        low = int(parts2[0].split("-")[0])
+        heigh = int(parts2[0].split("-")[1])
 
-        if Is_Valid = true:
-            ValidPassCounter += 1
+        print(low, heigh, letter, password) #debug
+      
+
+
+        # if Is_Valid = true:
+        #     ValidPassCounter += 1
 
 def Is_Valid(p, min, max, l):
     return true
