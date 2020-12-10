@@ -1,9 +1,9 @@
 # https://adventofcode.com/2020/day/1/
 
 lines = [
-'1-3 a: abcde',
-'1-3 b: cdefg',
-'2-9 c: ccccccccc',
+# '1-3 a: abcde',
+# '1-3 b: cdefg',
+# '2-9 c: ccccccccc',
 ]
 
 def load_data(fileName):
@@ -21,27 +21,34 @@ def problemOne():
 
     # split linjerne i deres bestanddele
     for line in lines:
-        parts1 = line.split(": ")
+        parts = line.split(": ")
         
-        password = parts1[1]
+        password = parts[1]
 
-        rules = parts1[0] 
-        parts2 = rules.split(" ")
+        rules = parts[0] 
+        ruleparts = rules.split(" ")
   
-        letter = parts2[1]
-        low = int(parts2[0].split("-")[0])
-        heigh = int(parts2[0].split("-")[1])
+        letter = ruleparts[1]
+        low = int(ruleparts[0].split("-")[0])
+        heigh = int(ruleparts[0].split("-")[1])
 
-        print(low, heigh, letter, password) #debug
+        # print(low, heigh, letter, password) debug
+ 
+        if is_valid(password, low, heigh, letter):
+             ValidPassCounter += 1
       
+    print(ValidPassCounter)
+    return ValidPassCounter
+    
 
-
-        # if Is_Valid = true:
-        #     ValidPassCounter += 1
-
-def Is_Valid(p, min, max, l):
-    return true
+def is_valid(p, min, max, l):
+    count = 0
+    for letter in p:
+        if l == letter:
+            count += 1
+    return min <= count and count <= max 
         
 
-# load_data("day2-input.txt")
-problemOne()
+load_data("day2-input.txt")
+a = problemOne()
+# print(a)
