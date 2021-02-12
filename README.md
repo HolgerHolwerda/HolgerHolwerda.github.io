@@ -16,3 +16,6 @@ Loopopgaver:
 - [Loopopgave 3](loop_opgaver/loop_3)
 - [Loopopgave 4a](loop_opgaver/loop_4a)
 - [Loopopgave 4b](loop_opgaver/loop_4b)
+
+Asteroids spil:
+- [Tryk her for at spille](https://holgerholwerda.github.io/Asteroids/Asteroid/)
