@@ -19,7 +19,7 @@ function draw() {
   // 1430 - 1515
   // 1520 - 1605
 
-  let today = 5 //date.getDay()
+  let today = 3 //date.getDay()
   let hour = 14 //date.getHours()
   let minut = 50 //date.getMinutes()
 

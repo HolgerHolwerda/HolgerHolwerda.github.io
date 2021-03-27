@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- <script src="../p5bibliotek/p5.js"></script>
+  <script src="../p5bibliotek/p5.sound.min.js"></script>
+  <link rel="../p5bibliotek/stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8"> -->
+
+</head>
+
+<body>
+  <!-- <script src="sketch.js"></script> -->
+
+  <p>08:00-08:45 | </p>
+  <p id="fag0">fag0</p>
+
+  <p>08:50-09:35 | </p>
+  <p id="fag1">fag1</p>
+
+  <p>09:55-10:40 | </p>
+  <p id="fag2">fag2</p>
+
+  <p>10:45-11:30 | </p>
+  <p id="fag3">fag3</p>
+
+  <p>11:55-12:40 | </p>
+  <p id="fag4">fag4</p>
+
+  <p>12:45-13:30 | </p>
+  <p id="fag5">fag5</p>
+
+  <p>13:40-14:25 | </p>
+  <p id="fag6">fag6</p>
+
+  <p>14:30-15:15 | </p>
+  <p id="fag7">fag7</p>
+
+  <p>15:20-16:05 | </p>
+  <p id="fag8">fag8</p>
+
+
+  <script>
+
+    let date = new Date();
+    let today = date.getDay()
+    // let hour = date.getHours()
+    // let minut = date.getMinutes()
+
+    let fag = []
+    let f = 'Fri'
+
+    if (today == 1) {
+      day = 'Mandag'
+      fag = ['Engelsk', 'Matematik', 'Matematik', 'Dansk', 'Kemi', 'Kemi', 'Idéhistorie', 'Idéhistorie', f]
+    } else if (today == 2) {
+      day = 'Tirsdag'
+      fag = [f, f, 'Dansk', 'Engelsk', 'Engelsk', 'Kemi', 'Kemi', 'Fysik', 'Fysik']
+    } else if (today == 3) {
+      day = 'Onsdag'
+      fag = ['Dansk', 'Dansk', 'Studietime', 'Studietime', 'Teknologi', 'Teknologi', 'Matematik', 'Matematik', f]
+    } else if (today == 4) {
+      day = 'Torsdag'
+      fag = ['Design', 'Design', 'Design', 'Engelsk', 'Engelsk', 'Programering', 'Programering', 'Programering', f]
+    } else if (today == 5) {
+      day = 'Fredag'
+      fag = ['Matematik', 'Matematik', 'Idéhistorie', 'Fysik', 'Fysik', 'Teknologi', 'Teknologi', f, f]
+    } else {
+      day = 'Weekend'
+      fag = [f, f, f, f, f, f, f, f, f]
+    }
+
+    document.getElementById("fag0").innerHTML = fag[0];
+    document.getElementById("fag1").innerHTML = fag[1];
+    document.getElementById("fag2").innerHTML = fag[2];
+    document.getElementById("fag3").innerHTML = fag[3];
+    document.getElementById("fag4").innerHTML = fag[4];
+    document.getElementById("fag5").innerHTML = fag[5];
+    document.getElementById("fag6").innerHTML = fag[6];
+    document.getElementById("fag7").innerHTML = fag[7];
+    document.getElementById("fag8").innerHTML = fag[8];
+  </script>
+
+</body>
+
+</html>
