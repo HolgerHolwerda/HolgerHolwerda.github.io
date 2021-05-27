@@ -1,5 +1,7 @@
 # HolgerHolwerda.github.io
 
+Introopgaver:
+
 - [Min opskriftside](hjemmeside/opskrift.html)
 - [Tændstiksmand](stickman)
 - [Bounce](bouncing_ball_test)
@@ -19,3 +21,6 @@ Loopopgaver:
 
 Asteroids spil:
 - [Tryk her for at spille](https://holgerholwerda.github.io/Asteroids/Asteroid/)
+
+Eksamensopgave - Media AI:
+- [Media AI](https://jonasx99.github.io/Media-AI/)
