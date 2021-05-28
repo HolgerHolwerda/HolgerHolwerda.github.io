@@ -1,0 +1,20 @@
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 400px;
+}
+
+.test {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+html {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 255, 0.5)
+  );
+  height: 100%;
+}
