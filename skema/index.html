@@ -7,11 +7,27 @@
   <link rel="../p5bibliotek/stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8"> -->
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" href="listicon.png" type="image/gif" sizes="16x16">
 
 </head>
 
 <body>
-  <!-- <script src="sketch.js"></script> -->
+
+  <p>
+  <div class="dropdown">
+    <button class="dropbtn" id="dag">dag</button>
+    <div class="dropdown-content">
+      <a onclick="Hej(1)">I dag</a>
+      <a onclick="Hej(2)">Mandag</a>
+      <a onclick="Hej(3)">Tirsdag</a>
+      <a onclick="Hej(4)">Onsdag</a>
+      <a onclick="Hej(5)">Torsdag</a>
+      <a onclick="Hej(6)">Fredag</a>
+      <a onclick="Hej(7)">Lørdag</a>
+      <a onclick="Hej(8)">Søndag</a>
+    </div>
+  </div>
+</p>
 
   <p class="l0">
   <p id="tid0">08:00-08:45 | </p>
@@ -52,43 +68,45 @@
   <p id="tid7">14:30-15:15 | </p>
   <p id="fag7">fag7</p>
   </p>
-
+  
   <p class="l8">
-  <p id="tid8">15:20-16:05 | </p>
+    <p id="tid8">15:20-16:05 | </p>
   <p id="fag8">fag8</p>
   </p>
 
-
   <script>
-
+    
     let date = new Date();
-    let today = date.getDay()
-    // let hour = date.getHours()
-    // let minut = date.getMinutes()
-
+    let today = date.getDay();
     let fag = []
-    let f = 'Fri'
+    let f = 'Fri'   
+    Hej(1)
 
-    if (today == 1) {
-      day = 'Mandag'
-      fag = ['Design', 'Design', 'Design', 'Idéhistorie', 'Dansk', f, 'Teknologi', 'Teknologi', 'Teknologi']
-    } else if (today == 2) {
-      day = 'Tirsdag'
-      fag = ['Matematik', 'Matematik', 'Matematik', 'Idéhistorie', 'Idéhistorie', f, f, f, f]
-    } else if (today == 3) {
-      day = 'Onsdag'
-      fag = ['Dansk', 'Dansk', 'Studietime', 'Studietime', 'Teknikfag', 'Teknikfag', 'Teknikfag', 'Teknikfag', f]
-    } else if (today == 4) {
-      day = 'Torsdag'
-      fag = ['Teknologi', 'Teknologi', 'Teknologi', 'Design', 'Design', 'Matematik', 'Matematik', 'Matematik', f]
-    } else if (today == 5) {
-      day = 'Fredag'
-      fag = ['Teknikfag', 'Teknikfag', 'Teknikfag', 'Teknikfag', 'Teknikfag', f, f, f, f]
-    } else {
-      day = 'Weekend'
-      fag = [f, f, f, f, f, f, f, f, f]
-    }
-
+    function Hej(dag){
+      let todayName = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag', 'Søndag']   
+      document.getElementById("dag").innerHTML = todayName[today-1];
+  
+      if(dag==1){document.getElementById("dag").innerHTML = todayName[today-1]}
+      else if (dag == 2){document.getElementById("dag").innerHTML = todayName[dag-2]}
+      else if (dag == 3){document.getElementById("dag").innerHTML = todayName[dag-2]}
+      else if (dag == 4){document.getElementById("dag").innerHTML = todayName[dag-2]}
+      else if (dag == 5){document.getElementById("dag").innerHTML = todayName[dag-2]}
+      else if (dag == 6){document.getElementById("dag").innerHTML = todayName[dag-2]}
+      else if (dag == 7){document.getElementById("dag").innerHTML = todayName[dag-2]}
+      else if (dag == 8){document.getElementById("dag").innerHTML = todayName[dag-2]}
+    
+      if (document.getElementById("dag").innerHTML == 'Mandag') {
+      fag = ['Design', 'Design', 'Design', 'Idéhistorie', 'Dansk', f, 'Teknologi', 'Teknologi', 'Teknologi']} 
+      else if (document.getElementById("dag").innerHTML == 'Tirsdag') {
+      fag = ['Matematik', 'Matematik', 'Matematik', 'Idéhistorie', 'Idéhistorie', f, f, f, f]} 
+      else if (document.getElementById("dag").innerHTML == 'Onsdag') {
+      fag = ['Dansk', 'Dansk', 'Studietime', 'Studietime', 'Teknikfag', 'Teknikfag', 'Teknikfag', 'Teknikfag', f]} 
+      else if (document.getElementById("dag").innerHTML == 'Torsdag') {
+      fag = ['Teknologi', 'Teknologi', 'Teknologi', 'Design', 'Design', 'Matematik', 'Matematik', 'Matematik', f]} 
+      else if (document.getElementById("dag").innerHTML == 'Fredag') {
+      fag = ['Teknikfag', 'Teknikfag', 'Teknikfag', 'Teknikfag', 'Teknikfag', f, f, f, f]} 
+      else {fag = [f, f, f, f, f, f, f, f, f]}
+    
     document.getElementById("fag0").innerHTML = fag[0];
     document.getElementById("fag1").innerHTML = fag[1];
     document.getElementById("fag2").innerHTML = fag[2];
@@ -98,7 +116,10 @@
     document.getElementById("fag6").innerHTML = fag[6];
     document.getElementById("fag7").innerHTML = fag[7];
     document.getElementById("fag8").innerHTML = fag[8];
-  </script>
+  
+  }
+  
+   </script>
 
 </body>
 

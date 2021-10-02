@@ -106,4 +106,38 @@ function draw() {
     } else{text('Weekend',100,100)}
 } 
 
+
+ // let todayName = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag', 'Søndag']   
+    //   document.getElementById("dag").innerHTML = todayName[today-1];
+    
+    //   if (today == 1) {
+  //     day = 'Mandag'
+  //     fag = ['Design', 'Design', 'Design', 'Idéhistorie', 'Dansk', f, 'Teknologi', 'Teknologi', 'Teknologi']
+  //   } else if (today == 2) {
+  //     day = 'Tirsdag'
+  //     fag = ['Matematik', 'Matematik', 'Matematik', 'Idéhistorie', 'Idéhistorie', f, f, f, f]
+  //   } else if (today == 3) {
+  //     day = 'Onsdag'
+  //     fag = ['Dansk', 'Dansk', 'Studietime', 'Studietime', 'Teknikfag', 'Teknikfag', 'Teknikfag', 'Teknikfag', f]
+  //   } else if (today == 4) {
+  //     day = 'Torsdag'
+  //     fag = ['Teknologi', 'Teknologi', 'Teknologi', 'Design', 'Design', 'Matematik', 'Matematik', 'Matematik', f]
+  //   } else if (today == 5) {
+    //     day = 'Fredag'
+  //     fag = ['Teknikfag', 'Teknikfag', 'Teknikfag', 'Teknikfag', 'Teknikfag', f, f, f, f]
+  //   } else {
+  //     day = 'Weekend'
+  //     fag = [f, f, f, f, f, f, f, f, f]
+  //   }
+  
+  // document.getElementById("fag0").innerHTML = fag[0];
+    // document.getElementById("fag1").innerHTML = fag[1];
+    // document.getElementById("fag2").innerHTML = fag[2];
+    // document.getElementById("fag3").innerHTML = fag[3];
+    // document.getElementById("fag4").innerHTML = fag[4];
+    // document.getElementById("fag5").innerHTML = fag[5];
+    // document.getElementById("fag6").innerHTML = fag[6];
+    // document.getElementById("fag7").innerHTML = fag[7];
+    // document.getElementById("fag8").innerHTML = fag[8];
+
 // genvejen beder om en dag og ellers viser den bare den aktuella
