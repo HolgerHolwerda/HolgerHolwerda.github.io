@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HSSH</title>
+  </head>
+
+  <body>
+     <div class="test"> <h1>HSSH</h1> </div>
+
+     <p id="time">1:05</p>
+
+
+    <!-- <script>
+
+// Set the date we're counting down to
+var idag = new Date();
+//vi tæller ned til idag om 2 timer og 15 minutter så dette interval tilføjes idag
+idag.setHours(idag.getHours() + 2);
+idag.setMinutes(idag.getMinutes() + 15)
+
+var countDownDate = new Date(idag).getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = hours + ':'
+  + minutes + ':' + seconds;
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "FRI";
+  }
+}, 1000);
+
+     </script> -->
+ 
+     <script>
+ 
+
+    function startTimer() {
+  var p_time = document.getElementById("time").innerHTML;
+  var timeArray = p_time.split(/[:]+/);
+  var min = timeArray[0];
+  var sec = checkSecond(timeArray[1] - 1);
+  if (sec === "59") { // <- the fix
+    min = min - 1;
+  }
+
+  document.getElementById("time").innerHTML = min + ":" + sec;
+
+  if (min <= 0 && sec == 0) {
+    clearTimeout(timerRef);
+    alert("Time is up!");
+    return;
+  }
+
+  if (min === 1 && sec === 0) {
+    min = 0;
+  }
+  var timerRef = setTimeout(startTimer, 1000);
+}
+
+function checkSecond(seconds) {
+  if (seconds < 10 && seconds >= 0) {
+    seconds = "0" + seconds;
+  }
+  if (seconds < 0) {
+    seconds = "59";
+  }
+  return seconds;
+}
+
+function wrongTimer() {
+  var x_time = document.getElementById("time").innerHTML;
+  var wrongArray = x_time.split(/[:]+/);
+  var x_min = wrongArray[0];
+  var x_sec = checkSecond(wrongArray[1] - 1);
+  if (x_sec === 59) {
+    x_min = x_min - 1;
+  }
+  x_sec -= 10;
+  console.log(document.getElementById("time").innerHTML);
+  console.log("sec " + x_sec);
+  document.getElementById("time").innerHTML = x_min + ":" + x_sec;
+}
+
+startTimer();
+     </script>
+ 
+    </body>
+</html>
