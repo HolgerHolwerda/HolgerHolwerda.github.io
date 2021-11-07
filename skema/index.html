@@ -77,16 +77,16 @@
   <script>
     
     let date = new Date();
-    // let today = date.getDay();
-    let today = 2
+    let today = date.getDay();
     let fag = []
     let f = 'Fri'   
     Hej(1)
-
+    
     function Hej(dag){
       let todayName = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag', 'Søndag']   
-      // document.getElementById("dag").innerHTML = todayName[today-1];
-  
+      
+      if(today == 0){today += 7} //søndag defineres som 0 og skal derfor øges til 7 for at koden virker
+
       if(dag==1){document.getElementById("dag").innerHTML = todayName[today-1]}
       else if (dag == 2){document.getElementById("dag").innerHTML = todayName[dag-2]}
       else if (dag == 3){document.getElementById("dag").innerHTML = todayName[dag-2]}
