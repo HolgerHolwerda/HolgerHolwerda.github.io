@@ -12,3 +12,62 @@
     </p>
   </body>
 </html>
+
+<!-- 
+  
+Guide til fremstilling af kodeordsbeskyttede mapper i windows 10:
+
+Opret et nyt .txt dokument med navnet "LockedFolder"
+Indsæt følgende i dokumentet:
+
+  cls
+  @ECHO OFF
+  title Folder Locker
+  if EXIST "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" goto UNLOCK
+  if NOT EXIST Locker goto MDLOCKER
+  :CONFIRM
+  echo Are you sure u want to Lock the folder(Y/N)
+  set/p "cho=>"
+  if %cho%==Y goto LOCK
+  if %cho%==y goto LOCK
+  if %cho%==n goto END
+  if %cho%==N goto END
+  echo Invalid choice.
+  goto CONFIRM
+  :LOCK
+  ren Locker "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+  attrib +h +s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+  echo Folder locked
+  goto End
+  :UNLOCK
+  echo Enter password to Unlock folder
+  set/p "pass=>"
+  if NOT %pass%==TAST_DIN_KODE_HER! goto FAIL
+  attrib -h -s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+  ren "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" Locker
+  echo Folder Unlocked successfully
+  goto End
+  :FAIL
+  echo Invalid password
+  goto end
+  :MDLOCKER
+  md Locker
+  echo Locker created successfully
+  goto End
+  :End
+
+Ændre "TAST_DIN_KODE_HER!" til den ønskede kode
+Vælg fil>gem som og ændre navnet fra "LockedFolder.txt" til "LockedFolder.bat" og vælg "alle filtyper" under filtype
+Tryk gem
+Slet evt. LockedFolder.txt
+Dobbleklik på LockedFolder.bat og en ny mappe kommer til syne
+Dobbleklik igen på LockedFolder.bat og mappen forsvinder
+Dobbelklik igen på LockedFolder.bat og tast koden. Mappen kommer frem igen
+Således kan man skjule filen og finde den frem med gyldigt password
+
+
+
+
+
+
+-->
