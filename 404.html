@@ -5,6 +5,16 @@
   </head>
 
   <body>
-    <pre><a style="color:black; text-decoration: none;">Cannot GET /wietse/brunkage.html</pre>
+    <pre><a style="color:#000000; text-decoration: none;" id="url"></pre>
+
+      <script>
+let adress = location.href
+let message = "Cannot GET "
+
+let Sadress = adress.replace('https://holgerholwerda.github.io','')
+
+document.getElementById("url").innerHTML = message + Sadress;
+
+      </script>
   </body>
 </html>
