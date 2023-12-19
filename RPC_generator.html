@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Pie Chart in JavaScript</title>
+</head>
+
+<body>
+    <canvas id="radarPieChart" width="800" height="800"></canvas>
+    <button 
+    	id="exportSVGButton"
+    	style=
+        	"color: white;
+  			padding: 15px 32px;
+  			text-align: center;
+ 			display: inline-block;
+  			font-size: 16px;
+ 			margin: 4px 2px;
+ 			cursor: pointer;
+            background-color:rgba(10,150,60,0.5);
+  			border: none;
+            border-radius: 100px"
+            
+    >Export as SVG</button>
+
+    <script>
+        // Your data
+        var data = [88, 40, 72, 70, 98, 70, 72, 96, 59];
+
+        // Chart configuration
+        var canvas = document.getElementById("radarPieChart");
+        var ctx = canvas.getContext("2d");
+        var centerX = canvas.width / 2;
+        var centerY = canvas.height / 2;
+        var originalRadius = Math.min(centerX, centerY) - 10;
+
+        // Make the entire graph 5x bigger
+        var scaleFactor = 5;
+        var radius = originalRadius * scaleFactor;
+
+        var total = data.reduce((acc, value) => acc + value, 0);
+
+        // Colors for each segment
+        var colors = [
+            'rgba(255, 99, 132, 1)',
+            'rgba(255, 205, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(255, 99, 132, 1)',
+            'rgba(255, 205, 86, 1)',
+            'rgba(75, 192, 192, 1)'
+        ];
+
+        // Index of the selected segment
+        var selectedSegment = null;
+
+        // Draw the radar pie chart
+        var startAngle = -Math.PI / 2; // Start from the top
+        var svgContent = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800">';
+
+        for (var i = 0; i < data.length; i++) {
+            var sliceAngle = (2 * Math.PI) / data.length;
+
+            // Calculate scaled radius based on data value
+            var scaledRadius = (data[i] / total) * radius;
+
+            // Move the data labels even further inside the segments
+            var labelX = centerX + (scaledRadius * 0.7) * Math.cos(startAngle + sliceAngle / 2);
+            var labelY = centerY + (scaledRadius * 0.7) * Math.sin(startAngle + sliceAngle / 2);
+
+            // Draw the segment
+            ctx.beginPath();
+            ctx.moveTo(centerX, centerY);
+            ctx.arc(centerX, centerY, scaledRadius, startAngle, startAngle + sliceAngle);
+            ctx.fillStyle = colors[i];
+            ctx.fill();
+            ctx.closePath();
+
+            // Add data labels
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.font = '18px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle'; // Center the text vertically
+            ctx.fillText(Math.floor(data[i].toString()), labelX, labelY);
+
+            // Append SVG representation for each segment
+            svgContent += `<path data-index="${i}" d="M${centerX},${centerY} L${centerX + Math.cos(startAngle) * scaledRadius},${centerY + Math.sin(startAngle) * scaledRadius} A${scaledRadius},${scaledRadius} 0 0,1 ${centerX + Math.cos(startAngle + sliceAngle) * scaledRadius},${centerY + Math.sin(startAngle + sliceAngle) * scaledRadius} Z" fill="${(selectedSegment !== null && i === selectedSegment) ? document.getElementById('colorPicker').value : colors[i]}"/>`;
+
+            startAngle += sliceAngle;
+        }
+
+        svgContent += '</svg>';
+
+       
+        // Export SVG button event handler
+        document.getElementById('exportSVGButton').addEventListener('click', function () {
+        	exportAsSVG(svgContent);
+		});
+
+ 
+        // Function to draw the radar pie chart
+        function drawRadarPieChart() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            startAngle = -Math.PI / 2; // Reset start angle
+
+            for (var i = 0; i < data.length; i++) {
+                var sliceAngle = (2 * Math.PI) / data.length;
+                var scaledRadius = (data[i] / total) * radius;
+                var labelX = centerX + (scaledRadius * 0.7) * Math.cos(startAngle + sliceAngle / 2);
+                var labelY = centerY + (scaledRadius * 0.7) * Math.sin(startAngle + sliceAngle / 2);
+
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.arc(centerX, centerY, scaledRadius, startAngle, startAngle + sliceAngle);
+                ctx.fillStyle = colors[i];
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                ctx.font = '18px Arial';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(data[i].toString(), labelX, labelY);
+
+                startAngle += sliceAngle;
+            }
+        }
+
+
+        // Function to export SVG content
+        function exportAsSVG(content) {
+            var blob = new Blob([content], { type: 'image/svg+xml;charset=utf-8' });
+            var url = URL.createObjectURL(blob);
+
+            var downloadLink = document.createElement("a");
+            downloadLink.href = url;
+            downloadLink.download = "radar_pie_chart.svg";
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+        
+       
+       
+       // Inser Data button event handler
+      //  document.getElementById('insertDataButton').addEventListener('click', function () {
+        //    datapicker();
+       // });
+        
+        // Funcion to insert data
+        //function datapicker() {
+       // 	let inputArray = inputData.split(,)
+         //let data = document.getElementById('inputData')  
+        //}
+        
+     //   <button id="insertDataButton">Insert Data</button>
+    //<input id="inputData" type="text"></input>
+        
+    </script>
+</body>
+</html>
